@@ -8,6 +8,8 @@ import { Theme } from './theme';
 import { StackElement as StackElementImpl, collectDependencies, ScopeDependencyCollector, collectSpecificDependencies, FullScopeDependency, PartialScopeDependency, ScopeDependency } from './grammar';
 import { IRawGrammar, IOnigLib } from './types';
 
+export * from './theme';
+export * from './plist';
 export * from './types';
 
 /**

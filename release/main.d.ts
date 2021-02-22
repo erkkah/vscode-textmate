@@ -1,4 +1,6 @@
 import { IRawGrammar, IOnigLib } from './types';
+export * from './theme';
+export * from './plist';
 export * from './types';
 /**
  * A single theme setting.

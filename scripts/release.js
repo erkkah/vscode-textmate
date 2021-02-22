@@ -8,5 +8,6 @@ if (!fs.existsSync(RELEASE_FOLDER)) {
 	fs.mkdirSync(RELEASE_FOLDER);
 }
 
-fs.writeFileSync(path.join(RELEASE_FOLDER, 'main.d.ts'), fs.readFileSync(path.join(OUT_FOLDER, 'main.d.ts')));
-fs.writeFileSync(path.join(RELEASE_FOLDER, 'types.d.ts'), fs.readFileSync(path.join(OUT_FOLDER, 'types.d.ts')));
+for (const file of ['main.d.ts', 'types.d.ts', 'plist.d.ts', 'theme.d.ts']) {
+	fs.writeFileSync(path.join(RELEASE_FOLDER, file), fs.readFileSync(path.join(OUT_FOLDER, file)));
+}
